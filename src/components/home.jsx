@@ -175,22 +175,22 @@ export default function Home(props) {
                   <form onSubmit={sendOrder}>
                     <label htmlFor="name">Full Name: </label>
                     <br />
-                    <input type="text" id="name" name="name" />
+                    <input type="text" id="name" name="name" required />
                     <br />
                     <br />
                     <label htmlFor="tel">Telephone: </label>
                     <br />
-                    <input type="text" id="tel" name="tel" />
+                    <input type="text" id="tel" name="tel" required />
                     <br />
                     <br />
                     <label htmlFor="address">Address: </label>
                     <br />
-                    <input type="text" id="address" name="address" />
+                    <input type="text" id="address" name="address" required />
                     <br />
                     <br />
                     <label htmlFor="email">Email: </label>
                     <br />
-                    <input type="email" id="email" name="email" />
+                    <input type="email" id="email" name="email" required />
                     <br />
                     <br />
                     <label htmlFor="comment">Comment: </label>
@@ -230,11 +230,16 @@ export default function Home(props) {
                   <label htmlfor="teachers">
                     Teachers guide number of copies:{" "}
                   </label>
-                  <input type="number" id="teachers" name="teachers_g" />
+                  <input
+                    type="number"
+                    id="teachers"
+                    name="teachers_g"
+                    required
+                  />
                   <br />
                   <br />
                   <label htmlfor="copies">Number of copies: </label>
-                  <input type="number" id="copies" name="st_copy" />
+                  <input type="number" id="copies" name="st_copy" required />
                   <br />
                   <br />
                   <Button color="success" type="submit">
