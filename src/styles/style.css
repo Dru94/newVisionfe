@@ -1,0 +1,108 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+.tbl {
+  width: 50%;
+}
+.tbl th {
+  border-bottom-style: solid;
+}
+.tbl tr td {
+  border-bottom-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.tbl tr :hover {
+  background-color: whitesmoke;
+}
+.modalDivOpen {
+  position: absolute;
+  left: 30%;
+  top: 7%;
+  z-index: 1;
+  height: 550px;
+  width: 500px;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+}
+.modalDivClose {
+  display: none;
+}
+.dtl {
+  display: flex;
+  flex-direction: column;
+}
+.orderForm {
+  border-top-style: solid;
+  padding-top: 10px;
+  height: 100px;
+}
+.tableDiv {
+  display: flex;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.orders {
+  height: inherit;
+  width: 40%;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+.orders h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+.orders h4 {
+  text-align: center;
+  color: #b2beb5;
+}
+.orders button {
+  margin-right: 0;
+}
+.orderWrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 500px;
+  padding: 10px;
+}
+.orderCard {
+  width: 70%;
+  height: 180px;
+  background-color: #3c3c3c;
+  color: #fff;
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.orderCard p {
+  font-size: 17px;
+  font-weight: bold;
+}
+.orderCardData {
+  font-size: 15px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.formDiv {
+  height: 450px;
+  background-color: #7393b3;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+.formDiv button {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  height: 50px;
+  width: 300px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+}
