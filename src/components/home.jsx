@@ -107,9 +107,57 @@ export default function Home(props) {
       .catch((e) => console.log(e));
   };
 
+  const filterBooks = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const values = Object.fromEntries(data.entries());
+
+    const numWord = {
+      1: "One",
+      2: "Two",
+      3: "Three",
+      4: "Four",
+      5: "Five",
+      6: "Six",
+      7: "Seven",
+    };
+
+    const filter_bks_arr = [];
+
+    for (const bk of books) {
+      if (
+        bk.level === values.level &&
+        bk.class_number === numWord[values.class]
+      ) {
+        filter_bks_arr.push(bk);
+      }
+    }
+
+    setBooks(filter_bks_arr);
+  };
+
   return (
     <>
       <div className="wrapper">
+        <div className="filterForm">
+          <p>FILTER SUBJECTS.</p>
+          <form onSubmit={filterBooks}>
+            <label>Select Level:</label>
+            <br />
+            <input type="radio" name="level" value="PRIMARY" />
+            <label>Primary</label>
+            <br />
+            <input type="radio" name="level" value="SENIOR" />
+            <label>Senior</label>
+            <br />
+            <br />
+            <label>Class: </label>
+            <input type="number" name="class" />
+            <br />
+            <br />
+            <button type="submit">Apply Filter</button>
+          </form>
+        </div>
         <div className="tableDiv">
           <table className="tbl">
             <tr>
@@ -125,6 +173,7 @@ export default function Home(props) {
                     detailsFunc(data);
                   }}
                   key={index}
+                  data-testid="subjects"
                 >
                   <td>{data.title}</td>
                   <td>{data.cost}</td>

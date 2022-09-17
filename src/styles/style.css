@@ -106,3 +106,21 @@
   margin: auto;
   cursor: pointer;
 }
+.filterForm {
+  border-style: solid;
+  padding: 5px;
+  width: 30%;
+  border-radius: 20px;
+  border-color: gray;
+}
+.filterForm p {
+  text-decoration: underline;
+}
+.filterForm form {
+  margin-left: 10px;
+}
+.filterForm form button {
+  height: 30px;
+  width: 100px;
+  background-color: #5cb85c;
+}
